@@ -20,9 +20,9 @@ pipeline {
             steps {
                 powershell 'Write-Output "Hello, World!"'
                 powershell "Write-Output 'Hello, World!'"
-                powershell """ $src1= 'C:\Users\Administrator\Desktop\Jenkins\workspace\GHPL1'
-                $dst1= 'C:\Users\Administrator\Desktop\site'
-                Get-ChildItem 'C:\Users\Administrator\Desktop\Jenkins\' -Filter '*' | Copy-Item -Destination $dst1 -Force """
+                powershell """ $src1= 'C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'
+                $dst1= 'C:\\Users\\Administrator\\Desktop\\site'
+                Get-ChildItem $src1 -Filter '*' | Copy-Item -Destination $dst1 -Force """
             }
         }
     }
