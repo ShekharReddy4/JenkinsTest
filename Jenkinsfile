@@ -20,10 +20,10 @@ pipeline {
             steps {
                 powershell 'Write-Output "Hello, World!"'
                 powershell "Write-Output 'Hello, World!'"
-                powershell "$src= 'C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'"
-                powershell "$dst= 'C:\\Users\\Administrator\\Desktop\\site'"
+                powershell "$src1= 'C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'"
+                powershell "$dst1= 'C:\\Users\\Administrator\\Desktop\\site'"
                 
-                powershell "Get-ChildItem $src -Filter '*' | Copy-Item -Destination $dst -Force"
+                powershell "Get-ChildItem $src1 -Filter '*' | Copy-Item -Destination $dst1 -Force"
                 
             }
         }
