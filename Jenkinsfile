@@ -20,7 +20,7 @@ pipeline {
                 powershell "Write-Output 'Hello, World!'"
                 powershell "$src1= 'C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'"
                 powershell "$dst1= 'C:\\Users\\Administrator\\Desktop\\site'"
-                powershell "Get-ChildItem $src1 -Filter '*' | Copy-Item -Destination $dst1 -Force"
+                powershell "Get-ChildItem ${WORKSPACE} -Filter '*' | Copy-Item -Destination $dst1 -Force"
             }
         }
     }
