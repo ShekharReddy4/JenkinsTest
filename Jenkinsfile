@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'xcopy C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1: C:\\Users\\Administrator\\Desktop\\site: /s /e'
+                bat 'xcopy C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1\\: C:\\Users\\Administrator\\Desktop\\site\\: /s /e'
             }
         }
     }
