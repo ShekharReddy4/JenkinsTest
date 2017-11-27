@@ -12,8 +12,7 @@ pipeline {
         stage('Test'){
             steps {
               bat 'ipconfig'
-              powershell "$src12='C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'"
-                powershell "$src12"
+              powershell """ $src12='C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1' """
             }
         }
         stage('Deploy') {
