@@ -20,7 +20,7 @@ pipeline {
             steps {
                 powershell 'Write-Output "Hello, World!"'
                 powershell "Write-Output 'Hello, World!'"
-                powershell "$dst= 'C:\\Users\\Administrator\\Desktop\\site'"
+                powershell "$dst= 'C:\Users\Administrator\Desktop\site'"
                 powershell "$src= $pwd.Drive.CurrentLocation"
                 powershell "Get-ChildItem $src -Filter '*' | Copy-Item -Destination $dst -Force"
                 
