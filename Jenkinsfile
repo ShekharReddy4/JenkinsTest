@@ -16,12 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                powershell """ Write-Output "Hello, World!"
-                Write-Output 'Hello, World!'
-                $src1= 'C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'
-                $dst1= 'C:\\Users\\Administrator\\Desktop\\site'
-                Get-ChildItem $src1 -Filter '*' | Copy-Item -Destination $dst1 -Force
-                """
+                bat 'xcopy C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1: C:\\Users\\Administrator\\Desktop\\site: /s /e'
             }
         }
     }
