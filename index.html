@@ -1,0 +1,29 @@
+<html><head></head><body>
+    <div><pre>something<div><button type="button" onclick="Bclick(this)">click</button></div>
+<div>fuc</div>
+<div>k</div>
+<div>o</div>
+<div>f</div>
+<div>f</div>
+<div>m</div>
+<div>a</div>
+<div>d</div>
+</pre></div>
+
+</body>
+
+<script>
+function Bclick(a){
+    console.log(a);
+    ele = a.closest('pre');
+    console.log(ele);
+    ele1=ele.innerText;
+    console.log(ele1);
+    text2=ele1.replace(/click/g, " ").replace(/\n/g, "").replace(/ /g,"");
+    console.log(text2);
+    
+}
+
+    </script>
+
+</html>
