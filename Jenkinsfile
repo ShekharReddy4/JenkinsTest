@@ -14,8 +14,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                powershell '$vart = "C:\\Users\\Adminstratot\\Desktop"'
-                powershell 'Write-Host "$vart"'
+                powershell '$(vart) = "C:\\Users\\Adminstratot\\Desktop"'
+                powershell 'Write-Host "$(vart)"'
+                powershell $(pwd).Path
             }
         }
     }
