@@ -16,10 +16,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                powershell ''' Write-Host 'helloworld'
+                powershell '''
+                Write-Host 'helloworld'
                 "$src='C:\\Users\\Administrator\\Desktop'"
                 "Write-Host $src"
-                "$src"
+                $src
                 '''
             }
         }
