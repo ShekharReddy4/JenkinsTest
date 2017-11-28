@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 powershell """ Write-Host '\$pwd'.Path
-                "\$src='sometjig''"
+                "\$src='sometjig'"
                 "Write-Host \$src"
                 "\$src"
                 """ 
