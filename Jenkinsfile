@@ -17,9 +17,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 powershell """ Write-Host 'helloworld'
-                $src='sometjig'
-                Write-Host $src
-                $src
+                "$src='sometjig'"
+                "Write-Host $src"
+                "$src"
                 """ 
             }
         }
