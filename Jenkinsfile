@@ -12,6 +12,7 @@ pipeline {
         stage('Test'){
             steps {
               bat 'ipconfig'
+                
             }
         }
         stage('Deploy') {
