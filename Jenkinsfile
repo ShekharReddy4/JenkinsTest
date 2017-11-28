@@ -20,7 +20,6 @@ pipeline {
                 Write-Host 'helloworld'
                 "$src='C:\\Users\\Administrator\\Desktop'"
                 "Write-Host $src"
-                $src
                 '''
             }
         }
