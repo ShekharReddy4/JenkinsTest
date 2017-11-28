@@ -18,7 +18,9 @@ pipeline {
             steps {
                 powershell '''
                 Write-Host 'helloworld'
-                "$src='C:\\Users\\Administrator\\Desktop'"
+                "$src='C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'"
+                "$dst='C:\\Users\\Administrator\\Desktop\\site'"
+                Get-ChildItem $src -Filter '*' | Copy-Item -Destination $dst -Force
                 "Write-Host $src"
                 '''
             }
