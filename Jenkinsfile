@@ -20,7 +20,7 @@ pipeline {
                 Write-Host 'helloworld'
                 "$src='C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'"
                 "$dst='C:\\Users\\Administrator\\Desktop\\site'"
-                Get-ChildItem $src -Filter '*' | Copy-Item -Destination $dst -Recurse -force
+                Get-ChildItem $src -Filter '*' | Copy-Item -Destination $dst -Recurse -Force
                 "Write-Host $src"
                 '''
             }
