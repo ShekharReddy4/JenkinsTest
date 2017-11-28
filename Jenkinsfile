@@ -1,8 +1,6 @@
 pipeline {
     
-    agent {
-        label 'Slave1'
-    } 
+    agent any
     stages {
         stage('Build') { 
             steps { 
@@ -16,7 +14,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'xcopy C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1\\: C:\\Users\\Administrator\\Desktop\\site\\: /s /e'
+                powershell '$vart = "C:\Users\Adminstratot\Desktop"'
+                powershell '$vart'
             }
         }
     }
