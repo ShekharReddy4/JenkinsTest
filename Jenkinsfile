@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 powershell '$vart = "C:\\Users\\Adminstratot\\Desktop"'
-                powershell '$vart'
+                powershell 'write-host "$vart"'
             }
         }
     }
