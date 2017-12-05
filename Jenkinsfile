@@ -2,10 +2,11 @@ pipeline {
     
     agent none
     stages {
-        agent {
+        
+        stage('Build') { 
+            agent {
     label 'Slave1'
     }
-        stage('Build') { 
             steps { 
               bat 'dir' 
             }
