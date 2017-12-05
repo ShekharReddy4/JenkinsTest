@@ -1,20 +1,27 @@
 pipeline {
     
-    agent {
+    agent none
+    stages {
+        agent {
     label 'Slave1'
     }
-    stages {
         stage('Build') { 
             steps { 
               bat 'dir' 
             }
         }
         stage('Test'){
+            agent {
+    label 'Slave1'
+    }
             steps {
               bat 'ipconfig'
             }
         }
         stage('Deploy') {
+            agent {
+    label 'Slave1'
+    }
             steps {
                 powershell '''
                 "$src='C:\\Users\\Administrator\\Desktop\\Jenkins\\workspace\\GHPL1'"
